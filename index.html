@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery</title>
+  <style>
+    *,:before,:after {margin: 0;box-sizing: border-box;}
+    button{cursor: pointer; padding: 0;}
+    a{text-decoration: none;}
+    :disabled{cursor: not-allowed}
+    img {vertical-align: bottom;}
+    iframe{ border: none;}
+
+    html{ font-size: 15px;  }
+    body {
+      font: 16px/1.2 system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .btn{ padding: 6px 12px; border: 1px solid; background: transparent; border-radius: 5px; }
+    .btn:active{ background: #00f; color: #fff; }
+    .btn.active{ background: #222; color: #fff; }
+
+    footer, nav, header, main{ padding: 10px; border: 1px solid #333; margin-bottom: 10px;}
+    .container{
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 10px;
+    }
+
+    .box, .collapse, .acc{
+      padding: 1rem;
+      margin: 1rem 0;
+      border: 1px solid #000;
+      border-radius: 8px;
+    }
+
+    :is(.acc,.collapse) a{ display: block; font-weight: 500;}
+    .collapse a::after, .acc a::after{ content: '+'; float: right;}
+    .collapse a.active::after, .acc a.active::after{ content: '—'; }
+    .collapse p, .acc p{ display: none; margin-top: 1rem;}
+    .acc:first-child p{ display: block; }
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+      <header>
+        <h1>jQuery</h1>
+      </header>
+      <main>
+        <h2> Main</h2>
+        <button class="btn hide">Hide</button>
+        <button class="btn show">Show</button>
+        <button class="btn toggle">Toggle</button>
+        <button class="btn blink">Blink</button>
+        <div class="box">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In culpa officia necessitatibus sequi deserunt modi est cum facilis beatae nisi eligendi alias, quia quos temporibus porro quasi aliquam dicta fuga!</p>
+        </div>
+        <h3>Collapse</h3>
+        <div class="collapse">
+          <a href="">Collapse</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae doloremque molestiae voluptas praesentium quas alias recusandae cum eum quibusdam! Modi, fuga rem! Ullam sunt laboriosam dicta illo nobis labore! Libero! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere fugit molestiae expedita ab, tempora facilis dolores culpa corporis rem eveniet veniam, quibusdam sint cumque voluptatem qui natus, eius est perferendis.</p>
+        </div>
+        <div class="collapse">
+          <a href="">Collapse</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae doloremque molestiae voluptas praesentium quas alias recusandae cum eum quibusdam! Modi, fuga rem! Ullam sunt laboriosam dicta illo nobis labore! Libero! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere fugit molestiae expedita ab, tempora facilis dolores culpa corporis rem eveniet veniam, quibusdam sint cumque voluptatem qui natus, eius est perferendis.</p>
+        </div>
+        <div class="collapse">
+          <a href="">Collapse</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae doloremque molestiae voluptas praesentium quas alias recusandae cum eum quibusdam! Modi, fuga rem! Ullam sunt laboriosam dicta illo nobis labore! Libero! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere fugit molestiae expedita ab, tempora facilis dolores culpa corporis rem eveniet veniam, quibusdam sint cumque voluptatem qui natus, eius est perferendis.</p>
+        </div>
+        <h2>Accordion</h2>
+        <div class="accordion">
+          <div class="acc">
+            <a class="active" href="">Accordion</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae doloremque molestiae voluptas praesentium quas alias recusandae cum eum quibusdam! Modi, fuga rem! Ullam sunt laboriosam dicta illo nobis labore! Libero! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere fugit molestiae expedita ab, tempora facilis dolores culpa corporis rem eveniet veniam, quibusdam sint cumque voluptatem qui natus, eius est perferendis.</p>
+          </div>
+          <div class="acc">
+            <a href="">Accordion</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae doloremque molestiae voluptas praesentium quas alias recusandae cum eum quibusdam! Modi, fuga rem! Ullam sunt laboriosam dicta illo nobis labore! Libero! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere fugit molestiae expedita ab, tempora facilis dolores culpa corporis rem eveniet veniam, quibusdam sint cumque voluptatem qui natus, eius est perferendis.</p>
+          </div>
+          <div class="acc">
+            <a href="">Accordion</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae doloremque molestiae voluptas praesentium quas alias recusandae cum eum quibusdam! Modi, fuga rem! Ullam sunt laboriosam dicta illo nobis labore! Libero! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere fugit molestiae expedita ab, tempora facilis dolores culpa corporis rem eveniet veniam, quibusdam sint cumque voluptatem qui natus, eius est perferendis.</p>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>&copy; 2024</p>
+      </footer>
+    </div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+//document.querySelectorAll("h1").forEach(function(i){i.textContent=2+3});
+
+$(function(){
+  //$("h1").text(2+3);
+
+  //$("h1").click(function(){ $(this).text(3+4)});
+  //$("h1").on("click",function(){});
+
+  //$("h1").on("dblclick",function(){});
+    
+  //$('input').on('input',function(){ });
+  //$("textarea").on("input",function(){});
+
+
+  //$(".btn").click(function(){$(this).text(3)})
+  $(".hide").click(function(){
+    //$(".box").hide(400);
+    //$(".box").fadeOut(400);
+    $(".box").slideUp(400);
+  });
+
+  $(".show").click(function(){
+    //$(".box").show(400);
+    //$(".box").fadeIn(400);
+    $(".box").slideDown(400);
+  });
+
+  $(".toggle").click(function(){
+    //$(".box").toggle(400);
+    //$(".box").fadeToggle(400);
+    //$(".box").slideToggle(400);
+  });
+
+  $(".blink").click(function(){
+    $(".box").fadeTo(300,0).delay(400).fadeTo(300,1,function(){ console.log("done");});
+  });
+
+  $(".collapse a").click(function(e){
+    e.preventDefault();
+    $(this).next("p").slideToggle();
+    $(this).toggleClass("active");
+  });
+
+  $(".accordion a").click(function(e){
+    e.preventDefault();
+    if($(this).next("p").is(":visible")){
+      $(this).next("p").slideUp();
+      $(this).removeClass("active");
+    }
+    else{
+      $(".accordion p").slideUp();
+      $(".accordion a").removeClass("active");
+      $(this).next("p").slideDown();
+      $(this).addClass("active");
+    }
+  });
+
+  //$("footer").load("footer.html");
+
+  
+});
+</script>
+</body>
+</html>
